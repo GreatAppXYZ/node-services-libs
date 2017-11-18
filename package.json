@@ -1,5 +1,5 @@
 {
-  "name": "services-libs",
+  "name": "greatapp-libs",
   "version": "1.0.0",
   "description": "Common libs for internal node services",
   "main": "index.js",
@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/GreatAppXYZ/node-services-libs/issues"
   },
-  "homepage": "https://github.com/GreatAppXYZ/node-services-libs#readme"
+  "homepage": "https://github.com/GreatAppXYZ/node-services-libs#readme",
+  "dependencies": {
+    "node-fetch": "^1.7.3"
+  }
 }
