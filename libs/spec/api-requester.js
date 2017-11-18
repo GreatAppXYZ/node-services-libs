@@ -1,41 +1,31 @@
 const fetch = require('node-fetch');
 let lastResponse;
 
-function get(url, callback) {
-  fetch(url).then((res) => {
-     res.json().then((body) => {
-        lastResponse = {
+function get(url) {
+  return fetch(url).then((res) => {
+     return res.json().then((body) => {
+        return lastResponse = {
           status: res.status,
           headers: res.headers.raw(),
           body: body
         };
-        callback();
-    }).catch((err) => {
-      callback(err);
     });
-  }).catch((err) => {
-    callback(err);
   });
 }
 
-function post(url, body, callback) {
+function post(url, body) {
   let info = {
       method: 'POST',
       headers: {"Content-Type": "application/json"}
     };
-  fetch(url, info).then((res) => {
-     res.json().then((body) => {
-        lastResponse = {
+  return fetch(url, info).then((res) => {
+     return res.json().then((body) => {
+        return lastResponse = {
           status: res.status,
           headers: res.headers.raw(),
           body: body
         };
-        callback();
-    }).catch((err) => {
-      callback(err);
     });
-  }).catch((err) => {
-    callback(err);
   });
 }
 

@@ -1,6 +1,6 @@
 {
   "name": "greatapp-libs",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Common libs for internal node services",
   "main": "index.js",
   "scripts": {
