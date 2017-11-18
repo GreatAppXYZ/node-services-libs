@@ -1,10 +1,7 @@
 const fetch = require('node-fetch');
-const port = process.env.PORT || 3000;
-const baseUrl = 'http://localhost:' + port;
 let lastResponse;
 
-function get(path, callback) {
-  const url = baseUrl + path;
+function get(url, callback) {
   fetch(url).then((res) => {
      res.json().then((body) => {
         lastResponse = {
@@ -21,8 +18,7 @@ function get(path, callback) {
   });
 }
 
-function post(path, body, callback) {
-  const url = baseUrl + path;
+function post(url, body, callback) {
   let info = {
       method: 'POST',
       headers: {"Content-Type": "application/json"}
