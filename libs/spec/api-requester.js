@@ -1,10 +1,9 @@
 const fetch = require('node-fetch');
-let lastResponse;
 
 function get(url) {
   return fetch(url).then((res) => {
      return res.json().then((body) => {
-        return lastResponse = {
+        return {
           status: res.status,
           headers: res.headers.raw(),
           body: body
@@ -20,7 +19,7 @@ function post(url, body) {
     };
   return fetch(url, info).then((res) => {
      return res.json().then((body) => {
-        return lastResponse = {
+        return {
           status: res.status,
           headers: res.headers.raw(),
           body: body
@@ -29,12 +28,7 @@ function post(url, body) {
   });
 }
 
-function getLastResponse() {
-  return lastResponse;
-}
-
 module.exports = {
   get: get,
-  post: post,
-  getLastResponse: getLastResponse
+  post: post
 };
