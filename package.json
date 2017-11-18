@@ -1,0 +1,23 @@
+{
+  "name": "services-libs",
+  "version": "1.0.0",
+  "description": "Common libs for internal node services",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GreatAppXYZ/node-services-libs.git"
+  },
+  "keywords": [
+    "libs",
+    "node"
+  ],
+  "author": "Alonso A. Ortega",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GreatAppXYZ/node-services-libs/issues"
+  },
+  "homepage": "https://github.com/GreatAppXYZ/node-services-libs#readme"
+}
